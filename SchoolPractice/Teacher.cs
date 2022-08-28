@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Xml.Linq;
 
 namespace SchoolPractice
 {
@@ -10,6 +11,15 @@ namespace SchoolPractice
         public string LastName { get; set; }
         public string Subject { get; set; }
         public int YearsTeaching { get; set; }
-    }
+        public string Instructor { get; set; }
 
+        public Teacher(string firstName, string lastName, string subject, int yearsTeaching)
+        {
+            FirstName = firstName;
+            LastName = lastName;
+            Subject = subject;
+            YearsTeaching = yearsTeaching;
+            Instructor = FirstName + LastName;
+        }
+    }    
 }
